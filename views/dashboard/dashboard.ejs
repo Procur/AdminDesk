@@ -1,2 +1,14 @@
 <h1>Dashboard</h1>
-<p><%= response %></p>
+
+<h2>System Administrators</h2>
+<% if (responseValid === true){ %>
+  <% response.forEach(function(admin){ %>
+    <div><%= admin.firstName + " " + admin.lastName %></div>
+  <% }); %>
+<% } else { %>
+  <p><%= response %></p>
+<% } %>
+
+<h2><a href="/analytics">Analytics</a></h2>
+
+<h2><a href="/logging">Error Logging</a></h2>
