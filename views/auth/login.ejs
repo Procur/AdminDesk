@@ -1,9 +1,12 @@
 <h1>Login</h1>
+<div>AdminDesk requires a valid Procur account</div><br />
 
-<%- req.flash('error') %>
+<div id="flash" style="color:red;"><%- req.flash('error') %></div>
 
-<form action="/login" method="POST">
-  <div><input type='text' name='email' placeholder='Email'></div>
-  <div><input type='password' name='password' placeholder='Password'></div>
-  <div><button type=submit>Login</div>
-</form>
+<div id="loginForm">
+  <form action="/login" method="POST">
+    <div><input type='text' name='email' placeholder='Email'></div>
+    <div><input type='password' name='password' placeholder='Password'></div>
+    <div><button type=submit>Login</div>
+  </form>
+</div>

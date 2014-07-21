@@ -34,10 +34,6 @@ module.exports = {
 		});
 	},
 
-	validateApiToken: function(req, res) {
-
-	},
-
 	logout: function(req, res){
 		req.session.authenticated = false;
 		res.redirect('/login');
