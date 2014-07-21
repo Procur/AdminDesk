@@ -1,3 +1,3 @@
 # AdminDesk
 
-a [Sails](http://sailsjs.org) application
+Allows Procur administration staff to curate user data and identify potential application errors.
