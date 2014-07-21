@@ -1,5 +1,5 @@
 /**
- * HomeController
+ * DashboardController
  */
 
 var rest = require('rest');
