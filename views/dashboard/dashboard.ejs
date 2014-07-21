@@ -2,9 +2,17 @@
 
 <h2>System Administrators</h2>
 <% if (responseValid === true){ %>
-  <% response.forEach(function(admin){ %>
-    <div><%= admin.firstName + " " + admin.lastName %></div>
-  <% }); %>
+  <ul>
+    <% response.forEach(function(admin){ %>
+      <li><%= admin.firstName + " " + admin.lastName %></li>
+    <% }); %>
+  </ul>
+  <br />
+  <div>Add a new administrator:</div>
+  <form action="/administrator/create" method="POST">
+    <div><input type="text" name="newAdmin" placeholder="Email"></div>
+    <div><button type="submit">Blap</button></div>
+  </form>
 <% } else { %>
   <p><%= response %></p>
 <% } %>
@@ -12,3 +20,5 @@
 <h2><a href="/analytics">Analytics</a></h2>
 
 <h2><a href="/logging">Error Logging</a></h2>
+
+<h3><a href='/logout'>Logout</a></h3>
