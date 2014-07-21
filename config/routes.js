@@ -28,7 +28,10 @@ module.exports.routes = {
   //
   // (Alternatively, remove this and add an `index.html` file in your `assets` directory)
 
-  'get /': 'DashboardController.dashboard'
+  'get /': 'DashboardController.dashboard',
+
+  'get /analytics': 'AnalyticsController.index',
+  'get /logging': 'LoggingController.index'
 
 
   // Custom routes here...
