@@ -33,13 +33,14 @@ module.exports.routes = {
   //AUTH ROUTES
   'get /login': 'AuthController.login',
   'post /login': 'AuthController.processLogin',
-
   'get /logout': 'AuthController.logout',
 
-  'get /analytics': 'AnalyticsController.index',
-  'get /logging': 'LoggingController.index',
+  //ADMINISTRATOR MANAGEMENT ROUTES
+  'post /administrator/create': 'UserController.create',
+  'get /administrators': 'UserController.show',
 
-  'get /administrators': 'UserController.show'
+  'get /analytics': 'AnalyticsController.index',
+  'get /logging': 'LoggingController.index'
 
 
   // Custom routes here...

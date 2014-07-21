@@ -9,6 +9,7 @@
   </ul>
   <br />
   <div>Add a new administrator:</div>
+  <div class="flashMessage" style="color:red;"><%- req.flash('error') %></div>
   <form action="/administrator/create" method="POST">
     <div><input type="text" name="newAdmin" placeholder="Email"></div>
     <div><button type="submit">Blap</button></div>
