@@ -1,8 +1,7 @@
 /**
  * AuthController
  *
- * @description :: Server-side logic for managing auths
- * @help        :: See http://links.sailsjs.org/docs/controllers
+ * @description :: Server-side logic for managing authentication
  */
 
 var token = require('../helpers/tokenFunctions.js'),
@@ -21,14 +20,27 @@ module.exports = {
 		};
 
 		rest({ method: 'POST', path: sails.config.api.host + '/login?email=' + params.email + "&password=" + params.password }).then(function(response){
-			var user = JSON.parse(response.entity);
-			req.session.token = user.token;
+
+			try {
+				var user = JSON.parse(response.entity);
+				req.session.token = user.token;
+				req.session.authenticated = true;
+			}
+			catch(err) {
+				req.flash('error', response.entity);
+				return res.redirect('/login');
+			}
 			res.redirect('/');
 		});
 	},
 
 	validateApiToken: function(req, res) {
 
+	},
+
+	logout: function(req, res){
+		req.session.authenticated = false;
+		res.redirect('/login');
 	}
 
 };
