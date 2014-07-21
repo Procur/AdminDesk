@@ -30,8 +30,13 @@ module.exports.routes = {
 
   'get /': 'DashboardController.dashboard',
 
+  //AUTH ROUTES
+  'get /login': 'AuthController.login',
+
   'get /analytics': 'AnalyticsController.index',
-  'get /logging': 'LoggingController.index'
+  'get /logging': 'LoggingController.index',
+
+  'get /administrators': 'UserController.show'
 
 
   // Custom routes here...
