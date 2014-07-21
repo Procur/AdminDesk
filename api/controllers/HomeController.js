@@ -1,9 +1,8 @@
 /**
  * HomeController
- *
- * @description :: Server-side logic for managing homes
- * @help        :: See http://links.sailsjs.org/docs/controllers
  */
+
+var rest = require('rest');
 
 module.exports = {
 
