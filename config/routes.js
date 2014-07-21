@@ -32,6 +32,7 @@ module.exports.routes = {
 
   //AUTH ROUTES
   'get /login': 'AuthController.login',
+  'post /login': 'AuthController.processLogin',
 
   'get /analytics': 'AnalyticsController.index',
   'get /logging': 'LoggingController.index',
