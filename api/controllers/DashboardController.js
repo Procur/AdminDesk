@@ -18,8 +18,6 @@ module.exports = {
 				apiResponse = response.entity;
 				responseValid = false;
 			}
-			console.log(apiResponse);
-			res.view({ response: apiResponse, responseValid: responseValid });
 		});
 	}
 };
